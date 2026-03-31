@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #333333;
+  --brand: #b88e2f;
+  --brand-soft: #fff3e3;
+  --brand-muted: #f9f1e7;
+  --surface: #f4f5f7;
+  --surface-alt: #fcf8f3;
+  --muted: #666666;
+  --muted-2: #9f9f9f;
+  --border: #d9d9d9;
+  --success: #2ec1ac;
+  --danger: #e97171;
+}
+
+@theme inline {
+  --font-sans: var(--font-poppins);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-muted: var(--brand-muted);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted-2);
+  --color-border: var(--border);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: rgb(184 142 47 / 22%);
+}
+
+.layout-shell {
+  margin-inline: auto;
+  width: min(100%, 1440px);
+  padding-inline: 16px;
+}
+
+.section-space {
+  padding-block: 56px;
+}
+
+.section-space-tight {
+  padding-block: 40px;
+}
+
+@media (min-width: 768px) {
+  .layout-shell {
+    padding-inline: 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .layout-shell {
+    padding-inline: 100px;
+  }
+
+  .section-space {
+    padding-block: 64px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .layout-shell {
+    padding-inline: 130px;
+  }
+}
